@@ -30,7 +30,7 @@
                     </div>
                     <hr/>
                     <!-- CREATING-->
-                    <div>
+                    <div ng-if="shouldShowCreating()">
                         <button type="button" class="btn btn-link">
                             <span class="glyphicon glyphicon-plus"></span>
                             Create Bookmark
@@ -40,7 +40,7 @@
                         </div>
                     </div>
                     <!-- EDITING-->
-                    <div>
+                    <div ng-if="shouldShowEditing()">
                         Edit a Bookmark!
                     </div>
                 </div>

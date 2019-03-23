@@ -56,9 +56,19 @@ angular
         $scope.isEditing = false;
     }
 
+    function shouldShowCreating(){
+        return $scope.currentCategory && !$scope.isEditing;
+    }
+
+    function shouldShowEditing(){
+        return $scope.isEditing && !$scope.isCreating;
+    }
+
     $scope.startCreating = startCreating;
     $scope.startEditing = startEditing;
     $scope.cancelCreating = cancelCreating;
     $scope.cancelEditing = cancelEditing;
+    $scope.shouldShowCreating = shouldShowCreating;
+    $scope.shouldShowEditing = shouldShowEditing;
 
 });
