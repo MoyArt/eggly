@@ -30,4 +30,35 @@ angular
     }
     $scope.setCurrentCategory = setCurrentCategory;
     $scope.isCurrentCategory = isCurrentCategory;
+
+    /*----------------------------------------------
+    * CREATING STATE FOR THE APP
+    -----------------------------------------------*/
+
+    $scope.isCreating = false;
+    $scope.isEditing = false;
+
+    function startCreating(){
+        $scope.isCreating = true;
+        $scope.isEditing = false;
+    }
+
+    function cancelCreating(){
+        $scope.isCreating = false;
+    }
+
+    function startEditing(){
+        $scope.isEditing = true;
+        $scope.isCreating = false;
+    }
+
+    function cancelEditing(){
+        $scope.isEditing = false;
+    }
+
+    $scope.startCreating = startCreating;
+    $scope.startEditing = startEditing;
+    $scope.cancelCreating = cancelCreating;
+    $scope.cancelEditing = cancelEditing;
+
 });
