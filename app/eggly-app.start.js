@@ -5,7 +5,7 @@ angular
     $scope.categories = [
         {"id":1, "name": "Development"},
         {"id":2, "name": "Design"},
-        {"id":3, "name": "Excercise"},
+        {"id":3, "name": "Exercise"},
         {"id":4, "name": "Humor"},
     ];
     $scope.bookmarks = [
@@ -19,4 +19,11 @@ angular
         {"id":7, "title": "Wimp", "url": "http://wimp.com", "category": "Humor" },
         {"id":8, "title": "Dump", "url": "http://dump.com", "category": "Humor" }
     ]
+
+    $scope.currentCategory = null;
+    function setCurrentCategory(category){
+        console.log(category);
+        $scope.currentCategory = category;
+    }
+    $scope.setCurrentCategory = setCurrentCategory;
 })
