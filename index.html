@@ -35,8 +35,11 @@
                             <span class="glyphicon glyphicon-plus" ng-click="startCreating();"></span>
                             Create Bookmark
                         </button>
-                        <div>
+                        <div ng-if="isCreating">
                             Create a Bookmark!
+                            <button class="btn btn-default btn-lg pull-right" ng-click="cancelCreating();">
+                                Cancel
+                            </button>
                         </div>
                     </div>
                     <!-- EDITING-->

@@ -22,8 +22,9 @@ angular
 
     $scope.currentCategory = null;
     function setCurrentCategory(category){
-        console.log(category);
         $scope.currentCategory = category;
+        cancelCreating();
+        cancelEditing();
     }
     function isCurrentCategory(category){
         return $scope.currentCategory !== null && category.name === $scope.currentCategory.name;
