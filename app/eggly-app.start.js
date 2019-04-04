@@ -66,7 +66,7 @@ angular
         $scope.isEditing = false;
     }
 
-    function isSelectedBookmark(bookmark){
+    function isSelectedBookmark(bookmarkId){
         return $scope.editedBookmark !== null && $scope.editedBookmark.id === bookmarkId;
     }
 
