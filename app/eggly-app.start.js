@@ -33,6 +33,23 @@ angular
     $scope.isCurrentCategory = isCurrentCategory;
 
     /*----------------------------------------------
+    * CREATING CRUD
+    -----------------------------------------------*/
+    function resetCreateForm(){
+        $scope.newBookmark = {
+            title: '',
+            url: '',
+            category: $scope.currentCategory
+        }
+    };
+
+    function createBookmark(bookmark){
+        bookmark.id = $scope.bookmarks.length;
+        $scope.bookmarks.push[bookmark];
+        resetCreateForm();
+    }
+
+    /*----------------------------------------------
     * CREATING STATE FOR THE APP
     -----------------------------------------------*/
 
@@ -42,6 +59,7 @@ angular
     function startCreating(){
         $scope.isCreating = true;
         $scope.isEditing = false;
+        resetCreateForm();
     }
 
     function cancelCreating(){
