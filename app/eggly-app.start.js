@@ -54,10 +54,20 @@ angular
     $scope.editedBookmark = null;
 
     function setEditedBookmark(bookmark){
-        $scope.editedBookmark = bookmark;
+        $scope.editedBookmark = angular.copy(bookmark);
+    }
+
+    function updateBookmark(bookmark){
+        const index = _.findIndex($scope.bookmarks, (b)=>{
+            return b.id === bookmark.id
+        })
+        $scope.bookmarks[index] = bookmark;
+        $scope.editedBookmark = null;
+        $scope.isEditing = false;
     }
 
     $scope.setEditedBookmark = setEditedBookmark;
+    $scope.updateBookmark = updateBookmark;
 
     /*----------------------------------------------
     * CREATING STATE FOR THE APP
