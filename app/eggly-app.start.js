@@ -49,7 +49,15 @@ angular
         $scope.bookmarks.push(bookmark);
         resetCreateForm();
     }
+
     $scope.createBookmark = createBookmark;
+    $scope.editedBookmark = null;
+
+    function setEditedBookmark(bookmark){
+        $scope.editedBookmark = bookmark;
+    }
+
+    $scope.setEditedBookmark = setEditedBookmark;
 
     /*----------------------------------------------
     * CREATING STATE FOR THE APP
