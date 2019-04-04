@@ -45,9 +45,11 @@ angular
 
     function createBookmark(bookmark){
         bookmark.id = $scope.bookmarks.length;
-        $scope.bookmarks.push[bookmark];
+        bookmark.category = $scope.currentCategory.name;
+        $scope.bookmarks.push(bookmark);
         resetCreateForm();
     }
+    $scope.createBookmark = createBookmark;
 
     /*----------------------------------------------
     * CREATING STATE FOR THE APP
