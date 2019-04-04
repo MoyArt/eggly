@@ -70,9 +70,16 @@ angular
         return $scope.editedBookmark !== null && $scope.editedBookmark.id === bookmarkId;
     }
 
+    function deleteBookmark(bookmark){
+        _.remove($scope.bookmarks, (b)=>{
+            return b.id === bookmark.id;
+        })
+    }
+
     $scope.setEditedBookmark = setEditedBookmark;
     $scope.updateBookmark = updateBookmark;
     $scope.isSelectedBookmark = isSelectedBookmark;
+    $scope.deleteBookmark = deleteBookmark;
 
     /*----------------------------------------------
     * CREATING STATE FOR THE APP
