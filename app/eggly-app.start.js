@@ -66,8 +66,13 @@ angular
         $scope.isEditing = false;
     }
 
+    function isSelectedBookmark(bookmark){
+        return $scope.editedBookmark !== null && $scope.editedBookmark.id === bookmarkId;
+    }
+
     $scope.setEditedBookmark = setEditedBookmark;
     $scope.updateBookmark = updateBookmark;
+    $scope.isSelectedBookmark = isSelectedBookmark;
 
     /*----------------------------------------------
     * CREATING STATE FOR THE APP
