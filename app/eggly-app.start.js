@@ -1,8 +1,17 @@
 angular
 .module('Eggly',[
+    'ui.router',
     'categories',
     'categories.bookmarks',
 ])
+.config(function($stateProvider){
+    $stateProvider
+        .state('eggly', {
+            url:'/',
+            templateUrl: 'app/categories/categories.tmpl.html',
+            controller: 'MainController',
+        });
+})
 .controller('MainController', function($scope){
     $scope.hello = 'world';
     $scope.categories = [
