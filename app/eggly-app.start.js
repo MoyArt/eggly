@@ -7,6 +7,7 @@ angular
         {"id":2, "name": "Design"},
         {"id":3, "name": "Exercise"},
         {"id":4, "name": "Humor"},
+        {"id":5, "name": "Memes"},
     ];
     $scope.bookmarks = [
         {"id":0, "title": "AngularJS", "url": "http://angularjs.org", "category": "Development" },
