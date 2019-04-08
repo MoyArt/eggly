@@ -4,13 +4,13 @@ angular
     'categories',
     'categories.bookmarks',
 ])
-.config(function($stateProvider){
+.config(function($stateProvider, $urlRouterProvider){
     $stateProvider
         .state('eggly', {
-            url:'/',
-            templateUrl: 'app/categories/categories.tmpl.html',
-            controller: 'MainController',
+            url:'',
+            abstract: true,
         });
+    $urlRouterProvider.otherwise('/')
 })
 .controller('MainController', function($scope){
     $scope.hello = 'world';
