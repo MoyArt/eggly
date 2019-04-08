@@ -1,5 +1,8 @@
 angular
-.module('Eggly',[])
+.module('Eggly',[
+    'categories',
+    'categories.bookmarks',
+])
 .controller('MainController', function($scope){
     $scope.hello = 'world';
     $scope.categories = [
